@@ -23,14 +23,11 @@ public class Program20 {
 
     // defiling a method
     public static boolean isContain(int[] arra, int a) {
-        //for (int n : arra){  //Alternative method
-        for (int n = 0; n < arra.length; n++) {
+        for (int n : arra)  //Alternative method
+            //for (int n = 0; n < arra.length; n++) {
             if (a == n) {
                 return true;
             }
+            return false;
         }
-        return false;
     }
-}
-
-
