@@ -18,6 +18,6 @@ public class Program19 {
             sum = sum + my_array4[j];
         }
         double average = sum / my_array4.length;
-        System.out.println("The sum is " + average);
+        System.out.println("The average is " + average);
     }
 }
