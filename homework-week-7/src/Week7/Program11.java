@@ -12,7 +12,7 @@ public class Program11 {
             obj.numdiviedbythree(i);
         }
         System.out.println("");
-        System.out.println("Printed number can be divided by 5:");//input wizard for a user
+        System.out.println("Printed number can be divided by 5 :");//input wizard for a user
         for (int j = 1; j <= 100; j++) {
             obj.numdiviedbyfive(j);
         }
