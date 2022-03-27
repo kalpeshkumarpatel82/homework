@@ -31,9 +31,12 @@ public class Program20 {
             return false;
         }
     }
+<<<<<<< HEAD
 
 
 
 
 
 
+=======
+>>>>>>> 0d6b1e86ba4ad23c4b67d76e02c6d9345372421c
