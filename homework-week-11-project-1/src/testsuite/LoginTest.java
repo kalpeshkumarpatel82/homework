@@ -14,7 +14,7 @@ public class LoginTest extends BaseTest {
 
     @Before
     public void setUp(){
-        OpenBrowser(baseUrl);
+        openBrowser(baseUrl);
     }
 
     @Test

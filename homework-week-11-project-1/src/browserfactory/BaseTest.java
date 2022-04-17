@@ -9,9 +9,8 @@ public class BaseTest {
 
     public static WebDriver driver;
 
-    public void OpenBrowser(String baseUrl){
+    public void openBrowser(String baseUrl){
         System.setProperty("webdriver.chrome.driver","drivers/chromedriver.exe");
-
         driver = new ChromeDriver();
 
         //Launch the URL.

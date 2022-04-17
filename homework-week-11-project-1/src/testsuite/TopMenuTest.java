@@ -14,7 +14,7 @@ public class TopMenuTest extends BaseTest {
 
     @Before
     public void setUp(){
-        OpenBrowser(baseUrl);
+        openBrowser(baseUrl);
     }
 
     @Test
@@ -106,7 +106,7 @@ public class TopMenuTest extends BaseTest {
         String actualMessageBooks = actualMessageTextBooks.getText();
 
         // Validating if user is on Books section
-        Assert.assertEquals("Not on Digital Download sections",expectedMessageBooks,actualMessageBooks);
+        Assert.assertEquals("Not on Books sections",expectedMessageBooks,actualMessageBooks);
 
     }
 
@@ -125,7 +125,7 @@ public class TopMenuTest extends BaseTest {
         String actualMessageJewel = actualMessageTextJewel.getText();
 
         // Validating if user is on Jewelry section
-        Assert.assertEquals("Not on Digital Download sections",expectedMessageJewelry,actualMessageJewel);
+        Assert.assertEquals("Not on Jewelry sections",expectedMessageJewelry,actualMessageJewel);
 
     }
 
@@ -144,7 +144,7 @@ public class TopMenuTest extends BaseTest {
         String actualMessageGiftCard = actualMessageTextGiftCard.getText();
 
         // Validating if user is on Gift Cards section
-        Assert.assertEquals("Not on Digital Download sections",expectedMessageGiftCard,actualMessageGiftCard);
+        Assert.assertEquals("Not on Gift Cards sections",expectedMessageGiftCard,actualMessageGiftCard);
 
     }
 

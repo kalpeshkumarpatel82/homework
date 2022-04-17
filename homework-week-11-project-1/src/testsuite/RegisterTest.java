@@ -12,7 +12,7 @@ public class RegisterTest extends BaseTest {
     String baseUrl = "https://demo.nopcommerce.com/";
     @Before
     public void setUp(){
-        OpenBrowser(baseUrl);
+        openBrowser(baseUrl);
     }
 
     @Test
@@ -66,7 +66,7 @@ public class RegisterTest extends BaseTest {
 
         String expectedMessage = "Your registration completed";
 
-        Assert.assertEquals("User is not loged in", expectedMessage,actualMessage);
+        Assert.assertEquals("User is not logged in", expectedMessage,actualMessage);
 
     }
 

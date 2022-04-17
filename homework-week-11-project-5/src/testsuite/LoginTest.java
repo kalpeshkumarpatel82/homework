@@ -13,12 +13,12 @@ public class LoginTest extends BaseTest {
     String baseUrl = "https://courses.ultimateqa.com/";
 
     @Before
-    public void setUp(){
+    public void setUp() {
         openBrowser(baseUrl);
     }
 
     @Test
-    public void userShouldNavigateToLoginPageSuccessfully(){
+    public void userShouldNavigateToLoginPageSuccessfully() {
 
         // Finding a sign in link and clicking on it
         WebElement signInLink = driver.findElement(By.linkText("Sign In"));
@@ -32,11 +32,11 @@ public class LoginTest extends BaseTest {
         String expectedMessage = "Welcome Back!";
 
         // Validating a test
-        Assert.assertEquals("User is not on Sign In Page", expectedMessage,actualMessage);
+        Assert.assertEquals("User is not on Sign In Page", expectedMessage, actualMessage);
     }
 
     @Test
-    public void verifyTheErrorMessage(){
+    public void verifyTheErrorMessage() {
         // Finding a sign in link and clicking on it
         WebElement signInLink = driver.findElement(By.linkText("Sign In"));
         signInLink.click();
@@ -61,16 +61,15 @@ public class LoginTest extends BaseTest {
         String expectedMessage = "Invalid email or password.";
 
         // validation of a test
-        Assert.assertEquals("Test Failed ", expectedMessage,actualMessage);
+        Assert.assertEquals("Test Failed ", expectedMessage, actualMessage);
 
     }
 
 
     @After
-    public void tearDown(){
+    public void tearDown() {
         closeBrowser();
     }
-
 
 
 }
