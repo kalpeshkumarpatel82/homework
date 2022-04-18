@@ -8,6 +8,8 @@ import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
+import java.util.List;
+
 public class LoginTest extends BaseTest {
 
     String baseUrl = "https://www.saucedemo.com/";
@@ -61,7 +63,10 @@ public class LoginTest extends BaseTest {
 
         // Finding if actual text in present or not
         //WebElement actualMessageText = driver.findElement(By.xpath("//div[@class='inventory_item_name']"));
-        int actualCountedItems = driver.findElements(By.xpath("//div[@class='inventory_item']")).size();
+        List<WebElement> Items = driver.findElements(By.xpath("//div[@class='inventory_item']"));
+        int actualCountedItems = Items.size();
+
+        //int actualCountedItems = driver.findElements(By.xpath("//div[@class='inventory_item']")).size(); // Alternate method
         // System.out.println(actualCountedItems); -- for debug purpose
 
         //Required for validation
