@@ -40,7 +40,7 @@ public class LoginTest extends BaseTest {
         String expectedMessage = "PRODUCTS";
 
         //Validating the test
-        Assert.assertEquals("User not logged in", expectedMessage,actualMessage);
+        Assert.assertEquals("User is not logged in", expectedMessage,actualMessage);
 
     }
 
@@ -68,7 +68,7 @@ public class LoginTest extends BaseTest {
         int expectedItems = 6;
 
         // validating a test
-        Assert.assertEquals("User not logged in", expectedItems,actualCountedItems);
+        Assert.assertEquals("Nr of items are not Six", expectedItems,actualCountedItems);
 
     }
 
