@@ -22,23 +22,15 @@ public class LoginTest extends Utility {
     @Test
     public void userShouldLoginSuccessfullyWithValidCredentials() {
         // finding a field User Name (Valid) and passing a value
-//        WebElement userName = driver.findElement(By.xpath("//input[@name='username']"));
-//        userName.sendKeys("tarak_mehta");
         sendTextToElement(By.xpath("//input[@name='username']"),"tarak_mehta");
 
         // finding a field Password (Valid) and passing a value
-//        WebElement passWord = driver.findElement(By.xpath("//input[@name='password']"));
-//        passWord.sendKeys("Password123");
         sendTextToElement(By.xpath("//input[@name='password']"),"Password123");
 
         // finding a login button and clicking on it
-//        WebElement loginButton = driver.findElement(By.xpath("//input[@class='button' and @value='Log In']"));
-//        loginButton.click();
         clickOnElement(By.xpath("//input[@class='button' and @value='Log In']"));
 
         //Searching for a specif text, to verify if page navigated to correct page
-//        WebElement actualMessageText = driver.findElement(By.xpath("//h1[@class='title' and contains(text(),'Accounts Overview')]"));
-//        String actualMessage = actualMessageText.getText();
         String actualMessage = getTextFromElement(By.xpath("//h1[@class='title' and contains(text(),'Accounts Overview')]"));
 
         //Verification text
