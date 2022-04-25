@@ -4,6 +4,7 @@ package utilities;
  */
 
 import browsertesting.BaseTest;
+import org.junit.Assert;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -64,6 +65,12 @@ public class Utility extends BaseTest {
     public void alertHandle(){
         Alert alert = driver.switchTo().alert(); //Creating Alert object reference and switch to alert
         alert.accept();
+    }
+
+    // Verification - using an Assert method -- NOT USED IN THE PROJECT FOR BETTER READABILITY OF CODES
+    public void verifyText(By by, String errMsg,String expectedMessage) {
+        String actualMessage = getTextFromElement(by);
+        Assert.assertEquals(errMsg, expectedMessage, actualMessage);
     }
 
 }

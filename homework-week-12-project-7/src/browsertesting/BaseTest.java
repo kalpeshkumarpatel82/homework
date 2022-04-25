@@ -30,6 +30,7 @@ public class BaseTest {
         // setting up an implicit timeout
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 
+
     }
 
     public void closeBrowser() {

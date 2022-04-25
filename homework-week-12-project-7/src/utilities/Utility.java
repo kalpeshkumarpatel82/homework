@@ -4,6 +4,7 @@ package utilities;
  */
 
 import browsertesting.BaseTest;
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -22,7 +23,6 @@ public class Utility extends BaseTest {
     public String getTextFromElement(By by) {
         return driver.findElement(by).getText();
     }
-
 
     //This method will get text from element for a specific attribute
     public String getTextFromElement(By by, String att) {
@@ -57,7 +57,13 @@ public class Utility extends BaseTest {
         Actions actions = new Actions(driver);
         WebElement menu = driver.findElement(by);
         actions.moveToElement(menu).build().perform();
-
     }
+
+    // Verification - using an Assert method -- Not used for a better readability of codes
+    public void verifyText(By by, String errMsg,String expectedMessage) {
+        String actualMessage = getTextFromElement(by);
+        Assert.assertEquals(errMsg, expectedMessage, actualMessage);
+    }
+
 
 }
