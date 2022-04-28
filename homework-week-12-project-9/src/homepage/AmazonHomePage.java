@@ -11,7 +11,6 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import utilites.Utility;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class AmazonHomePage extends Utility {
@@ -35,25 +34,23 @@ public class AmazonHomePage extends Utility {
         clickOnElement(By.xpath("//div[@id='brandsRefinements']//li[@id='p_89/Dell']//i[@class='a-icon a-icon-checkbox']"));
         Thread.sleep(2000);
         List<WebElement> searchList = listOfWebElementsList(By.xpath("//div[@class='s-main-slot s-result-list s-search-results sg-row']//a/span[contains(text(),'Dell')]"));
+        System.out.println("--------------------------------------------------");
         System.out.println("List of Searched items are : " +searchList.size());
-        List actualList = new ArrayList();
+        System.out.println("--------------------------------------------------");
+        System.out.println("              Name are following ");
+        System.out.println("--------------------------------------------------");
+
 
         for(WebElement data : searchList){
             String a = data.getText();
-            actualList.add(a);
+            System.out.println(a);
+
         }
-
-        for(Object data : actualList){
-            System.out.println(data);
-        }
-        //System.out.println(actualList);
-
-
 
     }
     @After
     public void tearDown(){
-        //closeBrowser();
+        closeBrowser();
     }
 
 }
