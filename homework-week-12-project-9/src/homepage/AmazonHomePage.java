@@ -35,9 +35,9 @@ public class AmazonHomePage extends Utility {
         Thread.sleep(2000);
         List<WebElement> searchList = listOfWebElementsList(By.xpath("//div[@class='s-main-slot s-result-list s-search-results sg-row']//a/span[contains(text(),'Dell')]"));
         System.out.println("--------------------------------------------------");
-        System.out.println("List of Searched items are : " +searchList.size());
+        System.out.println("Number of Searched items is : " +searchList.size());
         System.out.println("--------------------------------------------------");
-        System.out.println("              Name are following ");
+        System.out.println("              Names are following ");
         System.out.println("--------------------------------------------------");
 
 
